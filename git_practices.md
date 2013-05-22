@@ -66,9 +66,9 @@ Commits the changes in [file] to the current branch, and opens up a text editor 
 
 Two useful variations:
 
-*git commit -a* will commit the changes in all files that haveever been added to the repository (via git add), not just the ones currently in the staging area.
+`git commit -a` will commit the changes in all files that haveever been added to the repository (via git add), not just the ones currently in the staging area.
 
-*git commit -m* will allow you to write the commit message at the command line:
+`git commit -m` will allow you to write the commit message at the command line:
 
 ````sh
    git commit -am "I just committed the changes in all my files"
