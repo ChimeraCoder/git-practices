@@ -39,20 +39,28 @@ Basic Git commands
 After setting up your repository , there are only a few git commands you need to know in order on a daily basis.
 
 
+````sh
    $ git add [file]
+````
 
 Adds [file] to the staging area, but does not commit it. If the file has not yet been committed, or i there are changes in the file since it was last committed, the file is added. Otherwise, no action.
 
 
+````sh
    $ git diff 
+````
 
 See if there have been any unstaged changes since the last commit (ie, the things you should probably run git add on)
 
+````sh
    $ git diff --cached
+````
 
 See what changes are staged to be commited (ie, what will be commited if you run git commit -a)
 
+````sh
    $ git commit [file]
+````
 
 Commits the changes in [file] to the current branch, and opens up a text editor so that you can write a brief message explaining the changes. 
 
@@ -62,33 +70,47 @@ Two useful variations:
 
 *git commit -m* will allow you to write the commit message at the command line:
 
+````sh
    git commit -am "I just committed the changes in all my files"
+````
 
 As with most POSIX commands, you can combine the -a and -m flags, but be careful when viewing your shell history, or you may end up committing the same message twice!
 
 
+````sh
    $ git branch
+````
 
 Show the branches in the repo, and indicate which one is current
 
+````sh
    $ git branch [NEW-BRANCH-NAME]
+````
 
 Create a new branch, but do not switch to it (yet).
 
+````sh
    $ git checkout [BRANCH-NAME]
+````
 
 Switch to the specified branch
 
 
+````sh
    $ git merge [BRANCH/HEAD]
+````
 
 Merge the changes *from* the specified branch (or commit-head) *into* the *currrent* branch. Hopefully will not result in merge conflicts. All the intermediate commit messages will be kept.
 
+````sh
    $ git rebase BRANCH
+````
 
 This is almost like git-merge, except that only the last commit message will be visible in the log. (This isn't technically correct, but pretend it is). The advantage of this is that you can commit early and often on a feature branch without cluttering up the history for others, as people will only see the last commit message.
 
+````sh
    $ git push origin [BRANCH]
+````
 
 Assuming that you have configured github as 'origin', pushes the current branch 
 
@@ -97,7 +119,9 @@ Note: Git distinguishes between branch names on different copies of the reposito
 To avoid confusion, if you are not used to Git, it is a good idea to make sure that your local and branch names are the same (which git does by default). So, before you push to master, make sure that you are currently on branch master locally (use git branch)
 
 
+````sh
    $ git pull 
+````
 
 Fetches the changes from [BRANCH] located at origin and merges them into the current branch. (Literally - this command just runs git fetch; git merge). Make sure that you have committed all staged/unstaged changes before pulling! 
 
