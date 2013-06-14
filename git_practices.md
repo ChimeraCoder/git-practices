@@ -26,7 +26,7 @@ Basically, you only work in feature branches that never leave your machine. You 
 
 5. **Pull the changes from the origin** (git pull origin testing1). (Make sure you use the right name for testing1, or you will pull changes from the wrong branch!). If you have been following this process properly, you cannot have merge conflicts at this stage, because you have never edited the testing1 branch on your machine since you last pulled it).
 
-5. **Rebase the feature branch into the current branch**. (git rebase NEWBRANCH) Only the last commit message will be kept!
+5. **Rebase the feature branch into the current branch**. (git rebase NEWBRANCH)
 
 6. **Push the newly rebased current branch to GitHub**. (git push origin testing1). (**Make sure you include the foreign branch name, or you will end up pushing to master by default!**)
 
